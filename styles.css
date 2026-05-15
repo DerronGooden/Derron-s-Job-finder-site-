@@ -126,3 +126,56 @@ body {
     font-weight: bold;
     margin-top: 10px;
 }
+
+/* ============================= */
+/*        IMAGE SLIDER           */
+/* ============================= */
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 30px auto 0 auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(30, 58, 138, 0.7); /* matches your blue theme */
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(37, 99, 235, 0.9); /* lighter blue hover */
+}
+
