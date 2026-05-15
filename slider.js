@@ -1,33 +1,34 @@
 let slideIndex = 0;
 let slides = document.getElementsByClassName("slide");
-
-// Auto-play: change slide every 3 seconds
-setInterval(() => {
-    nextSlide();
-}, 3000);
+let totalSlides = slides.length;
 
 // Show a specific slide
 function showSlide(n) {
-    for (let i = 0; i < slides.length; i++) {
+    // Wrap around if needed
+    if (n >= totalSlides) n = 0;
+    if (n < 0) n = totalSlides - 1;
+
+    // Remove active from all slides
+    for (let i = 0; i < totalSlides; i++) {
         slides[i].classList.remove("active");
     }
+
+    // Add active to the correct slide
     slides[n].classList.add("active");
+
+    slideIndex = n;
 }
 
-// Go to next slide
+// Next slide
 function nextSlide() {
-    slideIndex++;
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
-    }
-    showSlide(slideIndex);
+    showSlide(slideIndex + 1);
 }
 
-// Go to previous slide
+// Previous slide
 function prevSlide() {
-    slideIndex--;
-    if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-    }
-    showSlide(slideIndex);
+    showSlide(slideIndex - 1);
 }
+
+// Auto-play every 3 seconds
+setInterval(nextSlide, 3000);
+
