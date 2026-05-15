@@ -1,0 +1,161 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #333;
+}
+
+/* Invoice Container */
+.invoice-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.invoice-header {
+    background: #1e3a8a;
+    padding: 30px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    text-align: center;
+}
+
+.company-name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.company-details {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Invoice Info */
+.invoice-info {
+    margin-top: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.invoice-number input,
+.invoice-date input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+/* Billing Section */
+.billing-section {
+    display: flex;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.billing-section h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.billing-section input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+/* Table */
+.invoice-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.invoice-table th {
+    background: #1e3a8a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.invoice-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.invoice-table input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Add Row Button */
+.add-row-btn {
+    margin-top: 15px;
+    background: #1e3a8a;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-row-btn:hover {
+    background: #2563eb;
+}
+
+/* Totals */
+.totals-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.totals-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.totals-label {
+    font-weight: bold;
+}
+
+.totals-value {
+    width: 140px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: right;
+}
+
+.total-row .total-value {
+    background: #1e3a8a;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+/* Footer */
+.invoice-footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #555;
+}
+
+.invoice-footer p {
+    margin-bottom: 5px;
+}

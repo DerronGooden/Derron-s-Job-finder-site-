@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Calculator</title>
+
+  <!-- Main site styling -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Invoice styling -->
+  <link rel="stylesheet" href="invoice.css">
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar">
+    <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li class="dropdown">
+            <a href="#">Jobs ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="jobs.html">All Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+            </ul>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mortgage.html">Mortgage Calculator</a></li>
+        <li><a href="invoice.html">Invoice Tool</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<section class="content">
+  <h1>Invoice Calculator</h1>
+  <p>Fill out the fields below to generate an invoice.</p>
+</section>
+
+<div class="invoice-container">
+
+  <!-- HEADER -->
+  <header class="invoice-header">
+      <h1 class="company-name">Company Name</h1>
+      <p class="company-details">Address, City, ST, ZIP Code</p>
+      <p class="company-details">Phone Number | Fax Number</p>
+  </header>
+
+  <!-- INVOICE INFO -->
+  <section class="invoice-info">
+      <h2 class="invoice-number">
+          Invoice #
+          <input type="text" id="invoiceNumber" placeholder="100">
+      </h2>
+      <p class="invoice-date">
+          Date: <input type="date" id="invoiceDate">
+      </p>
+  </section>
+
+  <!-- BILLING SECTION -->
+  <section class="billing-section">
+      <div class="bill-to">
+          <h3>Bill To</h3>
+          <input type="text" placeholder="Name | Company">
+          <input type="text" placeholder="Address, City, ST, ZIP Code">
+          <input type="text" placeholder="Phone">
+      </div>
+
+      <div class="bill-for">
+          <h3>For</h3>
+          <input type="text" placeholder="Product Description">
+      </div>
+  </section>
+
+  <!-- ITEM TABLE -->
+  <section class="invoice-table">
+      <table id="invoiceTable">
+          <thead>
+              <tr>
+                  <th>Item Description</th>
+                  <th>Quantity</th>
+                  <th>Unit Price</th>
+                  <th>Amount</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><input type="text" placeholder="Description"></td>
+                  <td><input type="number" class="qty" min="0" value="0"></td>
+                  <td><input type="number" class="price" min="0" step="0.01" value="0.00"></td>
+                  <td class="amount">$0.00</td>
+              </tr>
+          </tbody>
+      </table>
+
+      <button id="addRow" class="add-row-btn">+ Add Item</button>
+  </section>
+
+  <!-- TOTALS -->
+  <section class="totals-section">
+      <div class="totals-row">
+          <span class="totals-label">Subtotal</span>
+          <span id="subtotal" class="totals-value">$0.00</span>
+      </div>
+
+      <div class="totals-row">
+          <span class="totals-label">Tax Rate (%)</span>
+          <input type="number" id="taxRate" class="totals-value" placeholder="0">
+      </div>
+
+      <div class="totals-row">
+          <span class="totals-label">Other Costs</span>
+          <input type="number" id="otherCosts" class="totals-value" placeholder="0">
+      </div>
+
+      <div class="totals-row total-row">
+          <span class="total-label">Total Cost</span>
+          <span id="totalCost" class="total-value">$0.00</span>
+      </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="invoice-footer">
+      <p><strong>Make all checks payable to Company Name</strong></p>
+      <p>If you have any questions concerning this invoice, contact:</p>
+      <p>Contact Name | Phone Number | Email</p>
+      <p>Thank you for your business!</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
