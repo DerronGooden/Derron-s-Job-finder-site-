@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mortgage Calculator</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <ul class="nav-menu">
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li class="dropdown">
+            <a href="#">Jobs ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="jobs.html">All Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+            </ul>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+        <!-- NEW LINK -->
+        <li><a href="mortgage.html">Mortgage Calculator</a></li>
+
+        <li><a href="#login">Login</a></li>
+
+    </ul>
+</nav>
+
+<section class="content">
+    <h1>Mortgage Calculator</h1>
+    <p>Use this tool to estimate your monthly mortgage payment.</p>
+
+    <div class="calculator-box">
+
+        <label for="loanAmount">Loan Amount ($):</label>
+        <input type="number" id="loanAmount" placeholder="Enter loan amount">
+
+        <label for="interestRate">Annual Interest Rate (%):</label>
+        <input type="number" id="interestRate" step="0.01" placeholder="Enter interest rate">
+
+        <label for="loanYears">Loan Term (Years):</label>
+        <input type="number" id="loanYears" placeholder="Enter years">
+
+        <button onclick="calculateMortgage()" class="calc-btn">Calculate</button>
+
+        <h3>Monthly Payment:</h3>
+        <div id="result" class="result-box">$0.00</div>
+
+    </div>
+
+</section>
+
+<script src="mortgage.js"></script>
+
+</body>
+</html>
